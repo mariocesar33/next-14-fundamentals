@@ -8,7 +8,7 @@ import { Metadata } from 'next'
 async function getFeaturedProducts(): Promise<Product[]> {
   const response = await api('/products/featured', {
     next: {
-      revalidate: 10, // 10 segundos
+      revalidate: 60 * 60, // 1hour
     },
   })
 
