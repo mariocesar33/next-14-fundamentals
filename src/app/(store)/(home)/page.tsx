@@ -45,8 +45,8 @@ export default async function Home() {
             {highlightedProduct.price.toLocaleString('cv', {
               style: 'currency',
               currency: 'ECV',
-              minimumFractionDigits: 2,
-              maximumFractionDigits: 2,
+              minimumFractionDigits: 0,
+              maximumFractionDigits: 0,
             })}
           </span>
         </div>
@@ -74,8 +74,8 @@ export default async function Home() {
                 {product.price.toLocaleString('cv', {
                   style: 'currency',
                   currency: 'ECV',
-                  minimumFractionDigits: 2,
-                  maximumFractionDigits: 2,
+                  minimumFractionDigits: 0,
+                  maximumFractionDigits: 0,
                 })}
               </span>
             </div>
