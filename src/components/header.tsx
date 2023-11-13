@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -12,7 +13,10 @@ export function Header() {
           devstore
         </Link>
 
-        <SearchForm />
+        {/* Para evitar um erro do next na hora do build devido ao "useSearchParams" */}
+        <Suspense fallback={null}>
+          <SearchForm />
+        </Suspense>
       </div>
 
       <div className=" flex items-center gap-4">
